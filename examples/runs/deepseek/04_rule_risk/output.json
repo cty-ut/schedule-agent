@@ -1,0 +1,71 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M04",
+      "channel": "douyin",
+      "review_status": "blocked",
+      "risk_reasons": [
+        "R02 含绝对化用语：全网第一、100%"
+      ],
+      "requested_slot": "2026-11-05 14:00",
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "check_rules 返回 blocked（绝对化用语），按规则不得排期，需修改文案后重新提审",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M06",
+      "channel": "douyin",
+      "review_status": "blocked",
+      "risk_reasons": [
+        "R03 音乐版权补查结果 expired（TRK-2201 于 2026-09-30 到期）"
+      ],
+      "requested_slot": "2026-11-05 15:00",
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "needs_lookup 经 lookup_license 补查后版权已过期，check_rules 转为 blocked，不得排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M08",
+      "channel": "weibo",
+      "review_status": "needs_confirmation",
+      "risk_reasons": [
+        "R04 含促销信息（折、限时），须市场部确认价格口径"
+      ],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [
+        "促销信息（限时5折）价格口径须市场部确认"
+      ],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M08@weibo",
+      "decision_basis": "要求时段 20:00 可用，按原时段保存草稿，因促销风险标记待确认",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 6,
+    "tool_calls": 12,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

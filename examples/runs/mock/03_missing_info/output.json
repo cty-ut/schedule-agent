@@ -1,0 +1,72 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M03",
+      "channel": "douyin",
+      "review_status": "info_missing",
+      "risk_reasons": [
+        "信息缺失: title, copyright_owner"
+      ],
+      "requested_slot": "2026-11-05 10:00",
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "请补充素材信息后重新提交"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "素材信息不足，不审核不排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M99",
+      "channel": "douyin",
+      "review_status": "info_missing",
+      "risk_reasons": [
+        "信息缺失: 素材 M99 不存在"
+      ],
+      "requested_slot": "2026-11-05 11:00",
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "请补充素材信息后重新提交"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "素材信息不足，不审核不排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M02",
+      "channel": "bilibili",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": null,
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "请提供发布时间"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "缺少发布时间，无法排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "mock-policy",
+    "steps": 5,
+    "tool_calls": 5,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

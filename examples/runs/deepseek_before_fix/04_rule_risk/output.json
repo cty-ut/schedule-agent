@@ -1,0 +1,71 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M04",
+      "channel": "douyin",
+      "review_status": "blocked",
+      "risk_reasons": [
+        "R02 含绝对化用语：文案中“全网第一”“100%不糊”违反广告绝对化用语规则"
+      ],
+      "requested_slot": "2026-11-05 14:00",
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "check_rules 返回 blocked（R02 绝对化用语），按规则不得排期，需修改文案后重新提审",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M06",
+      "channel": "douyin",
+      "review_status": "blocked",
+      "risk_reasons": [
+        "R03 音乐版权待核实：补查 TRK-2201 状态为 expired，已于 2026-09-30 到期，授权失效"
+      ],
+      "requested_slot": "2026-11-05 15:00",
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "lookup_license 显示 TRK-2201 授权已过期，音乐版权不成立，不得排期；需更换曲目或续期授权后重新提审",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M08",
+      "channel": "weibo",
+      "review_status": "needs_confirmation",
+      "risk_reasons": [
+        "R04 含促销信息（折、限时），须市场部确认价格口径"
+      ],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [
+        "含促销信息（限时5折），须市场部确认价格口径与活动有效期"
+      ],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M08@weibo",
+      "decision_basis": "要求时段 20:00 微博可用，规则为 needs_confirmation，已保存草稿并标记待确认",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 6,
+    "tool_calls": 12,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "name": "01_normal",
+    "description": "正常排期（含版权补查后通过）",
+    "input": "examples/inputs/01_normal.json"
+  },
+  {
+    "name": "02_slot_conflict",
+    "description": "时段冲突：弹性时间改替代时段待确认；硬性时间不擅改",
+    "input": "examples/inputs/02_slot_conflict.json"
+  },
+  {
+    "name": "03_missing_info",
+    "description": "素材信息缺失 / 素材不存在 / 缺发布时间",
+    "input": "examples/inputs/03_missing_info.json"
+  },
+  {
+    "name": "04_rule_risk",
+    "description": "规则风险：绝对化用语阻断、版权补查过期阻断、促销信息待确认",
+    "input": "examples/inputs/04_rule_risk.json"
+  },
+  {
+    "name": "05_duplicate",
+    "description": "重复提交：同一请求运行两次只产生一份草稿",
+    "input": "examples/inputs/05_duplicate.json",
+    "repeat": 2
+  },
+  {
+    "name": "06_reschedule",
+    "description": "更换为已占用时段后重新提交：更新原草稿而非新建",
+    "input": "examples/inputs/06_reschedule.json",
+    "pre_drafts": [
+      {"material_id": "M02", "channel": "douyin", "slot": "2026-11-05 20:00", "requested_slot": "2026-11-05 20:00",
+       "status": "draft", "confirmation_items": [], "published": false}
+    ]
+  },
+  {
+    "name": "07_batch_conflict",
+    "description": "同批两个素材要求同一时段：后者须改期",
+    "input": "examples/inputs/07_batch_conflict.json"
+  },
+  {
+    "name": "08_save_failure",
+    "description": "保存失败（持续故障）：必须明确返回失败",
+    "input": "examples/inputs/08_save_failure.json",
+    "options": {"fail": ["save_draft"]}
+  },
+  {
+    "name": "09_save_retry",
+    "description": "保存失败一次后重试成功",
+    "input": "examples/inputs/08_save_failure.json",
+    "options": {"fail": ["save_draft:1"]}
+  },
+  {
+    "name": "10_step_limit",
+    "description": "步数上限：达到上限返回 incomplete",
+    "input": "examples/inputs/01_normal.json",
+    "options": {"max_steps": 3}
+  }
+]

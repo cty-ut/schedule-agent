@@ -1,0 +1,17 @@
+{
+  "request_id": "REQ-01",
+  "items": [
+    {
+      "material_id": "M02",
+      "channel": "douyin",
+      "requested_slot": "2026-11-05 20:00",
+      "time_requirement": "flexible"
+    },
+    {
+      "material_id": "M07",
+      "channel": "bilibili",
+      "requested_slot": "2026-11-05 20:00",
+      "time_requirement": "flexible"
+    }
+  ]
+}

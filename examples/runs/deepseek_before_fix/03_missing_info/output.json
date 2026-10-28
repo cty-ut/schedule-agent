@@ -1,0 +1,74 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M03",
+      "channel": "douyin",
+      "review_status": "info_missing",
+      "risk_reasons": [
+        "缺少必填字段: title, copyright_owner（规则 R01，阻断级）"
+      ],
+      "requested_slot": "2026-11-05 10:00",
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "需补充素材标题 title",
+        "需补充版权方 copyright_owner"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "check_rules 返回 info_missing，必填字段缺失，按规则不得排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M99",
+      "channel": "douyin",
+      "review_status": "info_missing",
+      "risk_reasons": [
+        "素材 M99 不存在（not_found）"
+      ],
+      "requested_slot": "2026-11-05 11:00",
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "请确认正确的素材 ID 或先上传该素材"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "get_material 返回 not_found，素材不存在无法审核与排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M02",
+      "channel": "bilibili",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": null,
+      "suggested_slot": "2026-11-05 10:00",
+      "pending_confirmations": [
+        "用户未指定发布时间，建议时段 2026-11-05 10:00 需用户确认"
+      ],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M02@bilibili",
+      "decision_basis": "check_rules 通过，B 站 2026-11-05 10:00 空闲，已保存草稿（未发布），因用户未指定时间标记待确认",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 5,
+    "tool_calls": 8,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

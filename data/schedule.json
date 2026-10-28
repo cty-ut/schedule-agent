@@ -1,0 +1,11 @@
+{
+  "_comment": "已有发布排期（合成）。每个渠道每个整点时段最多一条内容；可发布时段为 09:00-22:00 整点。",
+  "publish_hours": {"start": 9, "end": 22},
+  "channels": ["douyin", "bilibili", "weibo"],
+  "occupied": [
+    {"channel": "douyin", "slot": "2026-11-05 12:00", "content_id": "EXT-501", "owner": "电商组"},
+    {"channel": "douyin", "slot": "2026-11-05 18:00", "content_id": "EXT-502", "owner": "品牌部"},
+    {"channel": "douyin", "slot": "2026-11-05 21:00", "content_id": "EXT-503", "owner": "直播组"},
+    {"channel": "bilibili", "slot": "2026-11-05 19:00", "content_id": "EXT-601", "owner": "内容团队C组"}
+  ]
+}

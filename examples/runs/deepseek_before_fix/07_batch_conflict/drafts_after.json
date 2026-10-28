@@ -1,0 +1,33 @@
+[
+  {
+    "material_id": "M02",
+    "channel": "douyin",
+    "slot": "2026-11-05 20:00",
+    "requested_slot": "2026-11-05 20:00",
+    "status": "draft",
+    "confirmation_items": [],
+    "published": false,
+    "draft_id": "DRAFT-M02@douyin",
+    "version": 1,
+    "created_at": "2026-10-28T22:23:11",
+    "updated_at": "2026-10-28T22:23:11",
+    "history": []
+  },
+  {
+    "material_id": "M07",
+    "channel": "douyin",
+    "slot": "2026-11-05 19:00",
+    "requested_slot": "2026-11-05 20:00",
+    "status": "pending_confirmation",
+    "confirmation_items": [
+      "要求时段 2026-11-05 20:00 已被 M02 草稿占用，草稿改排至最近的可用时段 2026-11-05 19:00，请确认是否接受",
+      "音乐版权 TRK-3105 补查结果为 valid（有效期至 2027-06-30），但规则引擎仍标记 needs_lookup，请人工确认版权状态"
+    ],
+    "published": false,
+    "draft_id": "DRAFT-M07@douyin",
+    "version": 1,
+    "created_at": "2026-10-28T22:23:14",
+    "updated_at": "2026-10-28T22:23:14",
+    "history": []
+  }
+]

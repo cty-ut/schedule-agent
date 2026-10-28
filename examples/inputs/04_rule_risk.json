@@ -1,0 +1,23 @@
+{
+  "request_id": "REQ-04",
+  "items": [
+    {
+      "material_id": "M04",
+      "channel": "douyin",
+      "requested_slot": "2026-11-05 14:00",
+      "time_requirement": "flexible"
+    },
+    {
+      "material_id": "M06",
+      "channel": "douyin",
+      "requested_slot": "2026-11-05 15:00",
+      "time_requirement": "flexible"
+    },
+    {
+      "material_id": "M08",
+      "channel": "weibo",
+      "requested_slot": "2026-11-05 20:00",
+      "time_requirement": "flexible"
+    }
+  ]
+}

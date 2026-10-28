@@ -1,0 +1,71 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M04",
+      "channel": "douyin",
+      "review_status": "blocked",
+      "risk_reasons": [
+        "含绝对化用语: 全网第一, 100%"
+      ],
+      "requested_slot": "2026-11-05 14:00",
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "审核阻断，不排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M06",
+      "channel": "douyin",
+      "review_status": "blocked",
+      "risk_reasons": [
+        "音乐版权补查结果: expired"
+      ],
+      "requested_slot": "2026-11-05 15:00",
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "审核阻断，不排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M08",
+      "channel": "weibo",
+      "review_status": "needs_confirmation",
+      "risk_reasons": [
+        "含促销信息(折, 限时)，须市场部确认价格口径"
+      ],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [
+        "含促销信息(折, 限时)，须市场部确认价格口径"
+      ],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M08@weibo",
+      "decision_basis": "审核通过并保存草稿",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "mock-policy",
+    "steps": 10,
+    "tool_calls": 10,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

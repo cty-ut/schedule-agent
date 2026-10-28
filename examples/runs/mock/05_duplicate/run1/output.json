@@ -1,0 +1,35 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M01",
+      "channel": "douyin",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-05 18:00",
+      "suggested_slot": "2026-11-05 19:00",
+      "pending_confirmations": [
+        "2026-11-05 18:00 已占用，建议改为 2026-11-05 19:00，需确认"
+      ],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M01@douyin",
+      "decision_basis": "审核通过并保存草稿",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "mock-policy",
+    "steps": 6,
+    "tool_calls": 6,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

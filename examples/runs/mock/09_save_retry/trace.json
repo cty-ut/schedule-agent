@@ -1,0 +1,152 @@
+[
+  {
+    "step": 1,
+    "type": "tool_call",
+    "tool": "get_material",
+    "args": {
+      "material_id": "M02"
+    },
+    "reason": "读取元数据",
+    "result_summary": "M02 《运动相机防抖实测》 缺失字段=无",
+    "result": {
+      "ok": true,
+      "material": {
+        "material_id": "M02",
+        "title": "运动相机防抖实测",
+        "type": "video",
+        "duration_sec": 60,
+        "caption": "骑行、跑步两种场景下的防抖画面对比。",
+        "copyright_owner": "内容团队B组",
+        "music_license": "valid",
+        "tags": [
+          "实测"
+        ]
+      },
+      "missing_fields": []
+    }
+  },
+  {
+    "step": 2,
+    "type": "tool_call",
+    "tool": "check_rules",
+    "args": {
+      "material_id": "M02",
+      "channel": "douyin"
+    },
+    "reason": "执行审核规则",
+    "result_summary": "pass",
+    "result": {
+      "ok": true,
+      "material_id": "M02",
+      "channel": "douyin",
+      "review_status": "pass",
+      "findings": []
+    }
+  },
+  {
+    "step": 3,
+    "type": "tool_call",
+    "tool": "check_slot",
+    "args": {
+      "channel": "douyin",
+      "slot": "2026-11-05 20:00",
+      "material_id": "M02"
+    },
+    "reason": "查询要求时段",
+    "result_summary": "douyin 2026-11-05 20:00 可用",
+    "result": {
+      "ok": true,
+      "channel": "douyin",
+      "slot": "2026-11-05 20:00",
+      "available": true,
+      "occupied_by": null
+    }
+  },
+  {
+    "step": 4,
+    "type": "tool_call",
+    "tool": "save_draft",
+    "args": {
+      "material_id": "M02",
+      "channel": "douyin",
+      "slot": "2026-11-05 20:00",
+      "needs_confirmation": false,
+      "confirmation_items": []
+    },
+    "reason": "保存草稿",
+    "result_summary": "失败 tool_unavailable: save_draft 服务暂时不可用（注入故障）",
+    "result": {
+      "ok": false,
+      "error": "tool_unavailable",
+      "message": "save_draft 服务暂时不可用（注入故障）",
+      "retryable": true
+    }
+  },
+  {
+    "step": 5,
+    "type": "tool_call",
+    "tool": "save_draft",
+    "args": {
+      "material_id": "M02",
+      "channel": "douyin",
+      "slot": "2026-11-05 20:00",
+      "needs_confirmation": false,
+      "confirmation_items": []
+    },
+    "reason": "保存失败，重试一次",
+    "result_summary": "created DRAFT-M02@douyin v1 slot=2026-11-05 20:00 status=draft",
+    "result": {
+      "ok": true,
+      "action": "created",
+      "duplicate": false,
+      "draft": {
+        "material_id": "M02",
+        "channel": "douyin",
+        "slot": "2026-11-05 20:00",
+        "requested_slot": "2026-11-05 20:00",
+        "status": "draft",
+        "confirmation_items": [],
+        "published": false,
+        "draft_id": "DRAFT-M02@douyin",
+        "version": 1,
+        "created_at": "2026-10-28T22:24:22",
+        "updated_at": "2026-10-28T22:24:22",
+        "history": []
+      },
+      "note": "仅保存为草稿，未发布"
+    }
+  },
+  {
+    "step": 6,
+    "type": "tool_call",
+    "tool": "submit_result",
+    "args": {
+      "items": [
+        {
+          "material_id": "M02",
+          "channel": "douyin",
+          "review_status": "pass",
+          "risk_reasons": [],
+          "requested_slot": "2026-11-05 20:00",
+          "suggested_slot": "2026-11-05 20:00",
+          "pending_confirmations": [],
+          "draft_status": "saved",
+          "draft_id": "DRAFT-M02@douyin",
+          "decision_basis": "审核通过并保存草稿"
+        }
+      ],
+      "summary": "Mock 策略处理完成"
+    },
+    "reason": "全部处理完毕",
+    "result_summary": "提交通过",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "step": 6,
+    "type": "final",
+    "task_status": "completed",
+    "stop_reason": "submitted"
+  }
+]

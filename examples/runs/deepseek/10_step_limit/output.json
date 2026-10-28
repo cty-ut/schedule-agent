@@ -1,0 +1,52 @@
+{
+  "task_status": "incomplete",
+  "items": [
+    {
+      "material_id": "M02",
+      "channel": "douyin",
+      "requested_slot": "2026-11-05 20:00",
+      "time_requirement": "flexible",
+      "review_status": "unknown",
+      "risk_reasons": [],
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "decision_basis": "模型未给出该项结论（任务未完成）",
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "published": false,
+      "corrections": [
+        "M02: 模型未提交该项结论"
+      ]
+    },
+    {
+      "material_id": "M07",
+      "channel": "bilibili",
+      "requested_slot": "2026-11-05 20:00",
+      "time_requirement": "flexible",
+      "review_status": "unknown",
+      "risk_reasons": [],
+      "suggested_slot": null,
+      "pending_confirmations": [],
+      "decision_basis": "模型未给出该项结论（任务未完成）",
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "published": false,
+      "corrections": [
+        "M07: 模型未提交该项结论"
+      ]
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 3,
+    "tool_calls": 5,
+    "stop_reason": "max_steps_reached",
+    "limits": {
+      "max_steps": 3,
+      "max_tool_calls": 40
+    }
+  },
+  "incomplete_reason": "达到上限（max_steps_reached），以下为已核实的部分结果，未处理项需重新运行或人工处理。"
+}

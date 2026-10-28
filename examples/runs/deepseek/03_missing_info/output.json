@@ -1,0 +1,73 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M03",
+      "channel": "douyin",
+      "review_status": "info_missing",
+      "risk_reasons": [
+        "缺少必填字段: title, copyright_owner（规则 R01，阻断级）"
+      ],
+      "requested_slot": "2026-11-05 10:00",
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "需补充素材标题 title",
+        "需补充版权方 copyright_owner"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "check_rules 返回 info_missing（R01 缺必填字段），按规则不得排期，需补齐信息后重审",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M99",
+      "channel": "douyin",
+      "review_status": "info_missing",
+      "risk_reasons": [
+        "素材 M99 不存在（get_material 返回 not_found）"
+      ],
+      "requested_slot": "2026-11-05 11:00",
+      "suggested_slot": null,
+      "pending_confirmations": [
+        "请确认正确的素材 ID 或补充该素材"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "素材不存在，无法读取元数据与审核，不得排期",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M02",
+      "channel": "bilibili",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": null,
+      "suggested_slot": "2026-11-05 10:00",
+      "pending_confirmations": [
+        "用户未提供发布时间，需确认是否采用建议时段 2026-11-05 10:00"
+      ],
+      "draft_status": "not_saved",
+      "draft_id": null,
+      "decision_basis": "审核通过，但请求缺发布时间属信息缺失；save_draft 返回 missing_requested_slot，故不保存草稿，仅给出可用建议时段（10:00/11:00/09:00 均空闲）",
+      "time_requirement": "flexible",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 5,
+    "tool_calls": 8,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

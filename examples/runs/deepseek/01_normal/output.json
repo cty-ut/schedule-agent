@@ -1,0 +1,51 @@
+{
+  "task_status": "completed",
+  "items": [
+    {
+      "material_id": "M02",
+      "channel": "douyin",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M02@douyin",
+      "decision_basis": "元数据齐全，抖音渠道审核 pass，要求时段可用，按原时段保存草稿",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M07",
+      "channel": "bilibili",
+      "review_status": "pass",
+      "risk_reasons": [
+        "音乐版权原为待核实（R03），补查 TRK-3105 状态 valid（有效期至 2027-06-30）后风险解除"
+      ],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M07@bilibili",
+      "decision_basis": "版权补查有效后 B 站审核 pass，要求时段可用，按原时段保存草稿",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 6,
+    "tool_calls": 11,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

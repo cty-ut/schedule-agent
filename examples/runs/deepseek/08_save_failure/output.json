@@ -1,0 +1,36 @@
+{
+  "task_status": "failed",
+  "items": [
+    {
+      "material_id": "M02",
+      "channel": "douyin",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [],
+      "draft_status": "save_failed",
+      "draft_id": null,
+      "decision_basis": "素材字段齐全、抖音渠道审核 pass，请求时段 2026-11-05 20:00 可用；但 save_draft 连续两次返回 tool_unavailable，草稿未能保存，需稍后重试保存。",
+      "time_requirement": "flexible",
+      "save_errors": [
+        "tool_unavailable",
+        "tool_unavailable"
+      ],
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 5,
+    "tool_calls": 6,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

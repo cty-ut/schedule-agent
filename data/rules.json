@@ -1,0 +1,44 @@
+{
+  "_comment": "合成审核规则。severity: block=阻断不可排期; confirm=可排期但须人工确认; lookup=须补查后再判定。",
+  "rules": [
+    {
+      "rule_id": "R01",
+      "name": "必填元数据",
+      "severity": "block",
+      "required_fields": ["title", "type", "duration_sec", "caption", "copyright_owner", "music_license"],
+      "description": "缺少任一必填字段时视为信息不足，须补充后再审核。"
+    },
+    {
+      "rule_id": "R02",
+      "name": "绝对化用语",
+      "severity": "block",
+      "banned_terms": ["全网第一", "最好", "100%", "国家级", "顶级"],
+      "description": "标题或文案含绝对化用语（广告法风险），须修改后再排期。"
+    },
+    {
+      "rule_id": "R03",
+      "name": "音乐版权",
+      "severity": "lookup",
+      "description": "music_license=valid 通过；expired 阻断；pending_verification 须调用 lookup_license 补查；not_applicable 视为通过。"
+    },
+    {
+      "rule_id": "R04",
+      "name": "促销价格信息",
+      "severity": "confirm",
+      "trigger_terms": ["折", "优惠价", "限时", "秒杀"],
+      "confirm_owner": "市场部",
+      "description": "含价格/促销信息时可排期，但须市场部确认价格口径。"
+    },
+    {
+      "rule_id": "R05",
+      "name": "渠道时长上限",
+      "severity": "block",
+      "max_duration_sec": {"douyin": 180, "bilibili": 1800, "weibo": 300},
+      "description": "视频时长超过渠道上限时阻断。"
+    }
+  ],
+  "license_registry": {
+    "TRK-2201": {"status": "expired", "expired_on": "2026-09-30", "holder": "某音乐库"},
+    "TRK-3105": {"status": "valid", "valid_until": "2027-06-30", "holder": "某音乐库"}
+  }
+}

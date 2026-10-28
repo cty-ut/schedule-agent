@@ -1,0 +1,54 @@
+{
+  "task_status": "needs_user_action",
+  "items": [
+    {
+      "material_id": "M02",
+      "channel": "douyin",
+      "review_status": "pass",
+      "risk_reasons": [],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 20:00",
+      "pending_confirmations": [],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M02@douyin",
+      "decision_basis": "元数据齐全，抖音规则审核 pass，要求时段可用，按原时段保存草稿",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    },
+    {
+      "material_id": "M07",
+      "channel": "douyin",
+      "review_status": "pass",
+      "risk_reasons": [
+        "音乐版权原为 pending_verification，补查 TRK-3105 后为 valid（有效期至 2027-06-30）",
+        "原要求时段 2026-11-05 20:00 已被 M02 草稿占用，改排最近可用时段 19:00"
+      ],
+      "requested_slot": "2026-11-05 20:00",
+      "suggested_slot": "2026-11-05 19:00",
+      "pending_confirmations": [
+        "原要求时段 2026-11-05 20:00 已被 M02 草稿占用，草稿改排至最近的可用时段 2026-11-05 19:00，请确认是否接受"
+      ],
+      "draft_status": "saved",
+      "draft_id": "DRAFT-M07@douyin",
+      "decision_basis": "补查版权为 valid 后审核 pass；flexible 且要求时段被占用，改排最近可用时段 19:00 并标记待确认",
+      "time_requirement": "flexible",
+      "draft_action": "created",
+      "published": false,
+      "corrections": []
+    }
+  ],
+  "published": false,
+  "notice": "本系统只保存排期草稿，未执行任何发布操作。",
+  "run": {
+    "model": "deepseek-chat",
+    "steps": 8,
+    "tool_calls": 13,
+    "stop_reason": "submitted",
+    "limits": {
+      "max_steps": 20,
+      "max_tool_calls": 40
+    }
+  }
+}

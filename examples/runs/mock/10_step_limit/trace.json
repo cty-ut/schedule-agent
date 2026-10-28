@@ -1,0 +1,71 @@
+[
+  {
+    "step": 1,
+    "type": "tool_call",
+    "tool": "get_material",
+    "args": {
+      "material_id": "M02"
+    },
+    "reason": "读取元数据",
+    "result_summary": "M02 《运动相机防抖实测》 缺失字段=无",
+    "result": {
+      "ok": true,
+      "material": {
+        "material_id": "M02",
+        "title": "运动相机防抖实测",
+        "type": "video",
+        "duration_sec": 60,
+        "caption": "骑行、跑步两种场景下的防抖画面对比。",
+        "copyright_owner": "内容团队B组",
+        "music_license": "valid",
+        "tags": [
+          "实测"
+        ]
+      },
+      "missing_fields": []
+    }
+  },
+  {
+    "step": 2,
+    "type": "tool_call",
+    "tool": "check_rules",
+    "args": {
+      "material_id": "M02",
+      "channel": "douyin"
+    },
+    "reason": "执行审核规则",
+    "result_summary": "pass",
+    "result": {
+      "ok": true,
+      "material_id": "M02",
+      "channel": "douyin",
+      "review_status": "pass",
+      "findings": []
+    }
+  },
+  {
+    "step": 3,
+    "type": "tool_call",
+    "tool": "check_slot",
+    "args": {
+      "channel": "douyin",
+      "slot": "2026-11-05 20:00",
+      "material_id": "M02"
+    },
+    "reason": "查询要求时段",
+    "result_summary": "douyin 2026-11-05 20:00 可用",
+    "result": {
+      "ok": true,
+      "channel": "douyin",
+      "slot": "2026-11-05 20:00",
+      "available": true,
+      "occupied_by": null
+    }
+  },
+  {
+    "step": 3,
+    "type": "final",
+    "task_status": "incomplete",
+    "stop_reason": "max_steps_reached"
+  }
+]

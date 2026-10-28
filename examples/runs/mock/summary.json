@@ -1,0 +1,226 @@
+[
+  {
+    "run": "01_normal",
+    "task_status": "completed",
+    "stop_reason": "submitted",
+    "steps": 10,
+    "tool_calls": 10,
+    "drafts_in_store": 2,
+    "items": {
+      "M02@douyin": [
+        "pass",
+        "2026-11-05 20:00",
+        "saved",
+        "created"
+      ],
+      "M07@bilibili": [
+        "pass",
+        "2026-11-05 20:00",
+        "saved",
+        "created"
+      ]
+    }
+  },
+  {
+    "run": "02_slot_conflict",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 10,
+    "tool_calls": 10,
+    "drafts_in_store": 1,
+    "items": {
+      "M01@douyin": [
+        "pass",
+        "2026-11-05 19:00",
+        "saved",
+        "created"
+      ],
+      "M05@douyin": [
+        "pass",
+        "2026-11-05 22:00",
+        "not_saved",
+        null
+      ]
+    }
+  },
+  {
+    "run": "03_missing_info",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 5,
+    "tool_calls": 5,
+    "drafts_in_store": 0,
+    "items": {
+      "M03@douyin": [
+        "info_missing",
+        null,
+        "not_saved",
+        null
+      ],
+      "M99@douyin": [
+        "info_missing",
+        null,
+        "not_saved",
+        null
+      ],
+      "M02@bilibili": [
+        "pass",
+        null,
+        "not_saved",
+        null
+      ]
+    }
+  },
+  {
+    "run": "04_rule_risk",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 10,
+    "tool_calls": 10,
+    "drafts_in_store": 1,
+    "items": {
+      "M04@douyin": [
+        "blocked",
+        null,
+        "not_saved",
+        null
+      ],
+      "M06@douyin": [
+        "blocked",
+        null,
+        "not_saved",
+        null
+      ],
+      "M08@weibo": [
+        "needs_confirmation",
+        "2026-11-05 20:00",
+        "saved",
+        "created"
+      ]
+    }
+  },
+  {
+    "run": "05_duplicate/run1",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 6,
+    "tool_calls": 6,
+    "drafts_in_store": 1,
+    "items": {
+      "M01@douyin": [
+        "pass",
+        "2026-11-05 19:00",
+        "saved",
+        "created"
+      ]
+    }
+  },
+  {
+    "run": "05_duplicate/run2",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 6,
+    "tool_calls": 6,
+    "drafts_in_store": 1,
+    "items": {
+      "M01@douyin": [
+        "pass",
+        "2026-11-05 19:00",
+        "saved",
+        "duplicate"
+      ]
+    }
+  },
+  {
+    "run": "06_reschedule",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 6,
+    "tool_calls": 6,
+    "drafts_in_store": 1,
+    "items": {
+      "M02@douyin": [
+        "pass",
+        "2026-11-05 19:00",
+        "saved",
+        "updated"
+      ]
+    }
+  },
+  {
+    "run": "07_batch_conflict",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted",
+    "steps": 11,
+    "tool_calls": 11,
+    "drafts_in_store": 2,
+    "items": {
+      "M02@douyin": [
+        "pass",
+        "2026-11-05 20:00",
+        "saved",
+        "created"
+      ],
+      "M07@douyin": [
+        "pass",
+        "2026-11-05 19:00",
+        "saved",
+        "created"
+      ]
+    }
+  },
+  {
+    "run": "08_save_failure",
+    "task_status": "failed",
+    "stop_reason": "submitted",
+    "steps": 6,
+    "tool_calls": 6,
+    "drafts_in_store": 0,
+    "items": {
+      "M02@douyin": [
+        "pass",
+        "2026-11-05 20:00",
+        "save_failed",
+        null
+      ]
+    }
+  },
+  {
+    "run": "09_save_retry",
+    "task_status": "completed",
+    "stop_reason": "submitted",
+    "steps": 6,
+    "tool_calls": 6,
+    "drafts_in_store": 1,
+    "items": {
+      "M02@douyin": [
+        "pass",
+        "2026-11-05 20:00",
+        "saved",
+        "created"
+      ]
+    }
+  },
+  {
+    "run": "10_step_limit",
+    "task_status": "incomplete",
+    "stop_reason": "max_steps_reached",
+    "steps": 3,
+    "tool_calls": 3,
+    "drafts_in_store": 0,
+    "items": {
+      "M02@douyin": [
+        "unknown",
+        null,
+        "not_saved",
+        null
+      ],
+      "M07@bilibili": [
+        "unknown",
+        null,
+        "not_saved",
+        null
+      ]
+    }
+  }
+]

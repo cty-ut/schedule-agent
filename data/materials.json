@@ -1,0 +1,87 @@
+{
+  "_comment": "合成素材元数据，仅用于考核演示，不含真实数据。",
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "秋季新品开箱",
+      "type": "video",
+      "duration_sec": 45,
+      "caption": "带你看看秋季新品的细节和做工。",
+      "copyright_owner": "内容团队A组",
+      "music_license": "valid",
+      "tags": ["新品", "开箱"]
+    },
+    {
+      "material_id": "M02",
+      "title": "运动相机防抖实测",
+      "type": "video",
+      "duration_sec": 60,
+      "caption": "骑行、跑步两种场景下的防抖画面对比。",
+      "copyright_owner": "内容团队B组",
+      "music_license": "valid",
+      "tags": ["实测"]
+    },
+    {
+      "material_id": "M03",
+      "title": "",
+      "type": "video",
+      "duration_sec": 30,
+      "caption": "周末出游 vlog 片段。",
+      "copyright_owner": null,
+      "music_license": "valid",
+      "tags": ["vlog"]
+    },
+    {
+      "material_id": "M04",
+      "title": "全景相机年度盘点",
+      "type": "video",
+      "duration_sec": 90,
+      "caption": "全网第一的全景画质，100%不糊！",
+      "copyright_owner": "内容团队A组",
+      "music_license": "valid",
+      "tags": ["盘点"]
+    },
+    {
+      "material_id": "M05",
+      "title": "品牌发布会预热",
+      "type": "video",
+      "duration_sec": 30,
+      "caption": "11月5日晚，新品见。",
+      "copyright_owner": "品牌部",
+      "music_license": "valid",
+      "tags": ["预热"]
+    },
+    {
+      "material_id": "M06",
+      "title": "城市夜景延时",
+      "type": "video",
+      "duration_sec": 40,
+      "caption": "用延时摄影记录城市的夜晚。",
+      "copyright_owner": "内容团队C组",
+      "music_license": "pending_verification",
+      "music_track_id": "TRK-2201",
+      "tags": ["延时"]
+    },
+    {
+      "material_id": "M07",
+      "title": "潜水拍摄技巧",
+      "type": "video",
+      "duration_sec": 120,
+      "caption": "水下拍摄时的三个构图要点。",
+      "copyright_owner": "内容团队C组",
+      "music_license": "pending_verification",
+      "music_track_id": "TRK-3105",
+      "tags": ["教程"]
+    },
+    {
+      "material_id": "M08",
+      "title": "双十一预告",
+      "type": "image",
+      "duration_sec": 0,
+      "caption": "双十一限时5折，提前加购。",
+      "copyright_owner": "市场部",
+      "music_license": "not_applicable",
+      "tags": ["促销"]
+    }
+  ]
+}

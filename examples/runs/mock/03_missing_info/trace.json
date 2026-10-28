@@ -1,0 +1,157 @@
+[
+  {
+    "step": 1,
+    "type": "tool_call",
+    "tool": "get_material",
+    "args": {
+      "material_id": "M03"
+    },
+    "reason": "读取元数据",
+    "result_summary": "M03 《》 缺失字段=['title', 'copyright_owner']",
+    "result": {
+      "ok": true,
+      "material": {
+        "material_id": "M03",
+        "title": "",
+        "type": "video",
+        "duration_sec": 30,
+        "caption": "周末出游 vlog 片段。",
+        "copyright_owner": null,
+        "music_license": "valid",
+        "tags": [
+          "vlog"
+        ]
+      },
+      "missing_fields": [
+        "title",
+        "copyright_owner"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "type": "tool_call",
+    "tool": "get_material",
+    "args": {
+      "material_id": "M99"
+    },
+    "reason": "读取元数据",
+    "result_summary": "失败 not_found: 素材 M99 不存在",
+    "result": {
+      "ok": false,
+      "error": "not_found",
+      "message": "素材 M99 不存在"
+    }
+  },
+  {
+    "step": 3,
+    "type": "tool_call",
+    "tool": "get_material",
+    "args": {
+      "material_id": "M02"
+    },
+    "reason": "读取元数据",
+    "result_summary": "M02 《运动相机防抖实测》 缺失字段=无",
+    "result": {
+      "ok": true,
+      "material": {
+        "material_id": "M02",
+        "title": "运动相机防抖实测",
+        "type": "video",
+        "duration_sec": 60,
+        "caption": "骑行、跑步两种场景下的防抖画面对比。",
+        "copyright_owner": "内容团队B组",
+        "music_license": "valid",
+        "tags": [
+          "实测"
+        ]
+      },
+      "missing_fields": []
+    }
+  },
+  {
+    "step": 4,
+    "type": "tool_call",
+    "tool": "check_rules",
+    "args": {
+      "material_id": "M02",
+      "channel": "bilibili"
+    },
+    "reason": "执行审核规则",
+    "result_summary": "pass",
+    "result": {
+      "ok": true,
+      "material_id": "M02",
+      "channel": "bilibili",
+      "review_status": "pass",
+      "findings": []
+    }
+  },
+  {
+    "step": 5,
+    "type": "tool_call",
+    "tool": "submit_result",
+    "args": {
+      "items": [
+        {
+          "material_id": "M03",
+          "channel": "douyin",
+          "review_status": "info_missing",
+          "risk_reasons": [
+            "信息缺失: title, copyright_owner"
+          ],
+          "requested_slot": "2026-11-05 10:00",
+          "suggested_slot": null,
+          "pending_confirmations": [
+            "请补充素材信息后重新提交"
+          ],
+          "draft_status": "not_saved",
+          "draft_id": null,
+          "decision_basis": "素材信息不足，不审核不排期"
+        },
+        {
+          "material_id": "M99",
+          "channel": "douyin",
+          "review_status": "info_missing",
+          "risk_reasons": [
+            "信息缺失: 素材 M99 不存在"
+          ],
+          "requested_slot": "2026-11-05 11:00",
+          "suggested_slot": null,
+          "pending_confirmations": [
+            "请补充素材信息后重新提交"
+          ],
+          "draft_status": "not_saved",
+          "draft_id": null,
+          "decision_basis": "素材信息不足，不审核不排期"
+        },
+        {
+          "material_id": "M02",
+          "channel": "bilibili",
+          "review_status": "pass",
+          "risk_reasons": [],
+          "requested_slot": null,
+          "suggested_slot": null,
+          "pending_confirmations": [
+            "请提供发布时间"
+          ],
+          "draft_status": "not_saved",
+          "draft_id": null,
+          "decision_basis": "缺少发布时间，无法排期"
+        }
+      ],
+      "summary": "Mock 策略处理完成"
+    },
+    "reason": "全部处理完毕",
+    "result_summary": "提交通过",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "step": 5,
+    "type": "final",
+    "task_status": "needs_user_action",
+    "stop_reason": "submitted"
+  }
+]
